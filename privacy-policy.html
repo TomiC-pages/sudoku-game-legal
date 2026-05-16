@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Sudoku Game</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --parchment:   #FFF8F0;
+      --tan:         #F5E6D0;
+      --wood:        #8B6914;
+      --dark-brown:  #3E2723;
+      --med-brown:   #6D5A48;
+      --gold:        #C9A84C;
+      --gold-light:  #F0DCA0;
+      --border:      #D4BC9A;
+      --text:        #3E2723;
+      --text-dim:    #6D5A48;
+      --link:        #8B6914;
+    }
+
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      background: var(--parchment);
+      color: var(--text);
+      line-height: 1.75;
+      padding: 0;
+    }
+
+    /* ── Header ──────────────────────────────────────────── */
+    header {
+      background: var(--dark-brown);
+      color: #FFF8F0;
+      text-align: center;
+      padding: 48px 24px 40px;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 72px;
+      height: 72px;
+      border-radius: 16px;
+      background: var(--gold-light);
+      margin-bottom: 20px;
+    }
+
+    .logo svg { display: block; }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      letter-spacing: 0.03em;
+      color: var(--gold-light);
+      margin-bottom: 6px;
+    }
+
+    header p {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.9rem;
+      color: #c9b49a;
+      letter-spacing: 0.04em;
+    }
+
+    /* ── Gold rule ───────────────────────────────────────── */
+    .gold-rule {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 28px 0 0;
+    }
+    .gold-rule::before,
+    .gold-rule::after {
+      content: '';
+      flex: 1;
+      max-width: 80px;
+      height: 1px;
+      background: var(--gold);
+      opacity: 0.5;
+    }
+    .gold-rule span {
+      color: var(--gold);
+      font-size: 1rem;
+    }
+
+    /* ── Layout ─────────────────────────────────────────── */
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 24px 64px;
+    }
+
+    .effective-date {
+      text-align: center;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.82rem;
+      color: var(--text-dim);
+      padding: 18px 0 36px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    /* ── Sections ────────────────────────────────────────── */
+    section {
+      margin-bottom: 36px;
+      padding: 28px 32px;
+      background: #fff;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      box-shadow: 0 2px 8px rgba(62, 39, 35, 0.06);
+    }
+
+    section h2 {
+      font-size: 1.15rem;
+      font-weight: bold;
+      color: var(--wood);
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    section h2 .icon {
+      width: 22px;
+      height: 22px;
+      flex-shrink: 0;
+      opacity: 0.85;
+    }
+
+    section p { margin-bottom: 12px; }
+    section p:last-child { margin-bottom: 0; }
+
+    ul {
+      margin: 8px 0 12px 0;
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 6px;
+    }
+
+    ul li:last-child { margin-bottom: 0; }
+
+    strong { color: var(--dark-brown); }
+
+    a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    a:hover { color: var(--gold); }
+
+    /* ── Callout box ─────────────────────────────────────── */
+    .callout {
+      background: var(--gold-light);
+      border-left: 4px solid var(--gold);
+      border-radius: 6px;
+      padding: 14px 18px;
+      margin: 14px 0;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.9rem;
+      color: var(--dark-brown);
+    }
+
+    /* ── Contact card ────────────────────────────────────── */
+    .contact-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: var(--tan);
+      border-radius: 10px;
+      padding: 18px 22px;
+      margin-top: 14px;
+    }
+
+    .contact-card .label {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-dim);
+      margin-bottom: 3px;
+    }
+
+    .contact-card a {
+      font-size: 0.97rem;
+      font-weight: bold;
+    }
+
+    /* ── Footer ──────────────────────────────────────────── */
+    footer {
+      text-align: center;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      padding: 24px;
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 600px) {
+      section { padding: 20px 18px; }
+      header h1 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="2" y="2" width="40" height="40" rx="4" stroke="#8B6914" stroke-width="2.5"/>
+      <line x1="15.33" y1="2" x2="15.33" y2="42" stroke="#8B6914" stroke-width="1"/>
+      <line x1="28.67" y1="2" x2="28.67" y2="42" stroke="#8B6914" stroke-width="1"/>
+      <line x1="2" y1="15.33" x2="42" y2="15.33" stroke="#8B6914" stroke-width="1"/>
+      <line x1="2" y1="28.67" x2="42" y2="28.67" stroke="#8B6914" stroke-width="1"/>
+    </svg>
+  </div>
+  <h1>Privacy Policy</h1>
+  <p>Sudoku Game &nbsp;·&nbsp; com.tomic.sudoku_game</p>
+</header>
+
+<main>
+  <div class="gold-rule"><span>&#9733;</span></div>
+  <p class="effective-date">Effective Date: 16 May 2026</p>
+
+  <!-- 1. Introduction -->
+  <section>
+    <h2>
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#8B6914" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+      </svg>
+      Introduction
+    </h2>
+    <p>
+      This Privacy Policy describes how <strong>Tom</strong> ("<strong>we</strong>", "<strong>our</strong>") collects,
+      uses, and safeguards information when you use <strong>Sudoku Game</strong> (the "App"),
+      available on Android under the package identifier <code>com.tomic.sudoku_game</code>.
+    </p>
+    <p>
+      By using the App you agree to the practices described here. If you do not agree,
+      please discontinue use of the App.
+    </p>
+  </section>
+
+  <!-- 2. Data collected -->
+  <section>
+    <h2>
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#8B6914" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"/>
+      </svg>
+      Information We Collect
+    </h2>
+
+    <p>We collect only the minimum data required to operate the App.</p>
+
+    <p><strong>Account &amp; profile data</strong></p>
+    <ul>
+      <li><strong>Firebase UID</strong> — a unique identifier generated by Firebase Authentication. Anonymous users receive a randomly assigned UID; users who sign in with Google retain their Google Account UID.</li>
+      <li><strong>Display name</strong> — a name you choose within the App (not your real name unless you enter one).</li>
+      <li><strong>Country</strong> — selected voluntarily by you for leaderboard purposes.</li>
+      <li><strong>Game scores &amp; statistics</strong> — best scores per difficulty, win/loss counts, best times, and total score used for leaderboards and your profile.</li>
+    </ul>
+
+    <p><strong>Device &amp; advertising data</strong></p>
+    <ul>
+      <li><strong>Advertising ID (GAID)</strong> — collected by Google AdMob to serve and personalise advertisements. You may reset or opt out of ad personalisation at any time via your Android device settings (<em>Settings → Privacy → Ads</em>).</li>
+      <li><strong>General device information</strong> — device model, OS version, language, and network type, collected automatically by Firebase Analytics and AdMob for crash reporting, analytics, and ad delivery.</li>
+    </ul>
+
+    <div class="callout">
+      We do <strong>not</strong> collect your real name, email address, phone number, precise location, photos, contacts, or any other sensitive personal information.
+    </div>
+  </section>
+
+  <!-- 3. How we use data -->
+  <section>
+    <h2>
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#8B6914" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+      </svg>
+      How We Use Your Information
+    </h2>
+    <ul>
+      <li><strong>Game functionality</strong> — storing your profile, scores, and settings so they persist across sessions and devices.</li>
+      <li><strong>Leaderboards</strong> — displaying your display name, country flag, and best score in world, country, and continent rankings.</li>
+      <li><strong>Analytics</strong> — understanding how players interact with the App (which difficulty levels are popular, session lengths) so we can improve it. Analytics data is aggregated and not linked to personally identifiable information.</li>
+      <li><strong>Advertising</strong> — showing banner and interstitial advertisements via Google AdMob to support free access to the App.</li>
+    </ul>
+  </section>
+
+  <!-- 4. Google AdMob -->
+  <section>
+    <h2>
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#8B6914" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+      </svg>
+      Advertising — Google AdMob
+    </h2>
+    <p>
+      The App uses <strong>Google AdMob</strong> to display advertisements. AdMob may use your
+      Advertising ID and device information to personalise ads based on your interests.
+    </p>
+    <p>
+      Before any ads are loaded, the App presents a <strong>consent form</strong> (powered by
+      Google's User Messaging Platform) in compliance with the GDPR and similar regulations.
+      You can choose whether to allow personalised or non-personalised advertising.
+    </p>
+    <p>
+      For more information about how Google uses data for advertising, visit
+      <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">
+        policies.google.com/technologies/ads
+      </a>.
+    </p>
+    <p>
+      To opt out of interest-based advertising, visit
+      <a href="https://adssettings.google.com" target="_blank" rel="noopener">adssettings.google.com</a>
+      or adjust your device's advertising settings.
+    </p>
+  </section>
+
+  <!-- 5. Firebase Analytics -->
+  <section>
+    <h2>
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#8B6914" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/>
+      </svg>
+      Firebase Analytics
+    </h2>
+    <p>
+      The App uses <strong>Firebase Analytics</strong> (Google LLC) to collect anonymised usage
+      statistics such as screen views, session duration, and feature engagement. This data
+      helps us improve the App experience.
+    </p>
+    <p>
+      Firebase Analytics data is processed by Google on our behalf and is subject to
+      Google's Privacy Policy at
+      <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">
+        policies.google.com/privacy
+      </a>.
+      You can disable analytics data collection in the App's device notification settings,
+      or by enabling <em>Limit Ad Tracking</em> on your device.
+    </p>
+  </section>
+
+  <!-- 6. Data storage -->
+  <section>
+    <h2>
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#8B6914" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/>
+      </svg>
+      Data Storage &amp; Security
+    </h2>
+    <p>
+      Your profile and score data are stored in <strong>Google Cloud Firestore</strong>,
+      located in the <strong>europe-west2 (London)</strong> region. Data is encrypted in
+      transit (TLS) and at rest by Google Cloud.
+    </p>
+    <p>
+      A local copy of your profile is also cached on your device using
+      <strong>Hive</strong> (a local NoSQL database) for offline access. This data
+      remains on your device only and is removed when you uninstall the App.
+    </p>
+    <p>
+      We implement reasonable technical measures to protect your data, but no system is
+      completely secure. We encourage you not to enter sensitive personal information
+      as your display name or motto.
+    </p>
+  </section>
+
+  <!-- 7. Data sharing -->
+  <section>
+    <h2>
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#8B6914" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
+        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+      </svg>
+      Data Sharing &amp; Third Parties
+    </h2>
+    <p>
+      We <strong>do not sell, rent, or trade</strong> your personal information to any third party.
+    </p>
+    <p>We share data only with the following service providers, solely to operate the App:</p>
+    <ul>
+      <li><strong>Google LLC</strong> — Firebase Authentication, Cloud Firestore, Firebase Analytics, and Google AdMob. Google processes this data as a data processor on our behalf.</li>
+    </ul>
+    <p>
+      We may disclose information if required by law or to protect the rights, property,
+      or safety of users or the public.
+    </p>
+  </section>
+
+  <!-- 8. GDPR -->
+  <section>
+    <h2>
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#8B6914" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      </svg>
+      Your Rights — GDPR (EU / EEA / UK Users)
+    </h2>
+    <p>
+      If you are located in the European Union, European Economic Area, or United Kingdom,
+      you have the following rights under the General Data Protection Regulation (GDPR):
+    </p>
+    <ul>
+      <li><strong>Right of access</strong> — request a copy of the personal data we hold about you.</li>
+      <li><strong>Right to rectification</strong> — correct inaccurate data by updating your profile within the App.</li>
+      <li><strong>Right to erasure</strong> — request deletion of your account and associated data.</li>
+      <li><strong>Right to data portability</strong> — request your data in a machine-readable format.</li>
+      <li><strong>Right to object</strong> — object to processing of your data for direct marketing or where we rely on legitimate interests.</li>
+      <li><strong>Right to withdraw consent</strong> — withdraw ad-personalisation consent at any time via the in-app consent form or your device settings.</li>
+    </ul>
+    <p>
+      To exercise any of these rights, contact us at the email address below.
+      We will respond within 30 days.
+    </p>
+    <div class="callout">
+      <strong>Legal basis for processing:</strong> Performance of the App's core features (contract), your consent for personalised advertising, and our legitimate interest in improving the App via anonymised analytics.
+    </div>
+  </section>
+
+  <!-- 9. Children -->
+  <section>
+    <h2>
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#8B6914" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+      </svg>
+      Children's Privacy
+    </h2>
+    <p>
+      The App is <strong>not directed at children under the age of 13</strong>.
+      We do not knowingly collect personal information from children under 13.
+    </p>
+    <p>
+      If you believe a child under 13 has provided personal information through
+      the App, please contact us immediately and we will delete that information
+      as quickly as possible.
+    </p>
+  </section>
+
+  <!-- 10. Changes -->
+  <section>
+    <h2>
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#8B6914" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+      </svg>
+      Changes to This Policy
+    </h2>
+    <p>
+      We may update this Privacy Policy from time to time. When we do, we will
+      update the <strong>Effective Date</strong> at the top of this page.
+      Continued use of the App after changes are posted constitutes acceptance
+      of the revised policy.
+    </p>
+    <p>
+      For significant changes, we will make reasonable efforts to notify you
+      within the App.
+    </p>
+  </section>
+
+  <!-- 11. Contact -->
+  <section>
+    <h2>
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#8B6914" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+        <polyline points="22,6 12,13 2,6"/>
+      </svg>
+      Contact Us
+    </h2>
+    <p>
+      If you have any questions about this Privacy Policy, wish to exercise
+      your data rights, or need to report a privacy concern, please contact us:
+    </p>
+    <div class="contact-card">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#8B6914" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+        <polyline points="22,6 12,13 2,6"/>
+      </svg>
+      <div>
+        <div class="label">Support email</div>
+        <a href="mailto:sudoku-game-support@googlegroups.com">sudoku-game-support@googlegroups.com</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  &copy; 2026 Tom &nbsp;·&nbsp; Sudoku Game &nbsp;·&nbsp; com.tomic.sudoku_game<br>
+  All rights reserved.
+</footer>
+
+</body>
+</html>
